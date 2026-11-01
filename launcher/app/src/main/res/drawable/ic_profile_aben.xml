@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Clean Apple-style Crown / Aben Icon -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M5,19H19V21H5V19ZM19,17H5L3,7L8,12L12,5L16,12L21,7L19,17ZM12,8.83L10.37,11.69L6.55,8.87L7.69,15H16.31L17.45,8.87L13.63,11.69L12,8.83Z"/>
+</vector>

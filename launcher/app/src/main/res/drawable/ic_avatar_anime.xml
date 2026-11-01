@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Anime Hero Avatar: Electric Violet Circle with Neon Katana & Lightning -->
+    <path
+        android:pathData="M36,4 A32,32 0 1,0 36,68 A32,32 0 1,0 36,4 Z"
+        android:fillColor="#E66A1B9A" />
+    <path
+        android:pathData="M38,18 L26,38 L36,38 L34,54 L46,34 L36,34 Z"
+        android:fillColor="#FFFFEB3B" />
+    <path
+        android:pathData="M18,48 L54,24 L52,22 L16,46 Z"
+        android:fillColor="#E6E1BEE7" />
+</vector>

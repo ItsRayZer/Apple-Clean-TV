@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Cartoon / Gamer Avatar: Cyan Teal Circle with Retro Arcade Controller -->
+    <path
+        android:pathData="M36,4 A32,32 0 1,0 36,68 A32,32 0 1,0 36,4 Z"
+        android:fillColor="#E600695C" />
+    <path
+        android:pathData="M24,26 L48,26 C53,26 56,30 54,38 L51,46 C50,49 46,50 43,47 L38,42 L34,42 L29,47 C26,50 22,49 21,46 L18,38 C16,30 19,26 24,26 Z"
+        android:fillColor="#FFFFFFFF" />
+    <!-- D-pad -->
+    <path
+        android:pathData="M25,32 L27,32 L27,34 L29,34 L29,36 L27,36 L27,38 L25,38 L25,36 L23,36 L23,34 L25,34 Z"
+        android:fillColor="#FF004D40" />
+    <!-- Buttons -->
+    <path
+        android:pathData="M46,33 A1.5,1.5 0 1,0 46,36 A1.5,1.5 0 1,0 46,33 Z"
+        android:fillColor="#FFE91E63" />
+    <path
+        android:pathData="M43,36 A1.5,1.5 0 1,0 43,39 A1.5,1.5 0 1,0 43,36 Z"
+        android:fillColor="#FF00BCD4" />
+</vector>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recentOverlayRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EB070A10"
+    android:focusable="false"
+    android:clickable="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/recentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="RECENT APPS"
+            android:textColor="#BFD4ED"
+            android:textSize="14sp"
+            android:letterSpacing="0.14"
+            android:fontFamily="@string/font_medium" />
+
+        <HorizontalScrollView
+            android:id="@+id/recentScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp">
+
+            <LinearLayout
+                android:id="@+id/recentCards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clipChildren="false"
+                android:clipToPadding="false" />
+        </HorizontalScrollView>
+
+        <!-- Bottom Row: Search and Home Button -->
+        <LinearLayout
+            android:id="@+id/recentBottomRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/btnRecentSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:gravity="center"
+                android:text="Search"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:fontFamily="@string/font_medium"
+                android:focusable="true"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/btnRecentHome"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:gravity="center"
+                android:text="Home"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:fontFamily="@string/font_medium"
+                android:focusable="true"
+                android:clickable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Anime Ninja Avatar: Crimson Scarlet Circle with Shadow Shinobi Mask -->
+    <path
+        android:pathData="M36,4 A32,32 0 1,0 36,68 A32,32 0 1,0 36,4 Z"
+        android:fillColor="#E6B71C1C" />
+    <path
+        android:pathData="M22,28 C22,22 50,22 50,28 L50,48 C50,54 22,54 22,48 Z"
+        android:fillColor="#E61E1E24" />
+    <!-- Visor Eye opening -->
+    <path
+        android:pathData="M27,33 L45,33 L45,39 L27,39 Z"
+        android:fillColor="#FFFFFFFF" />
+    <path
+        android:pathData="M31,34 L35,36 L31,38 Z"
+        android:fillColor="#FFE53935" />
+    <path
+        android:pathData="M41,34 L37,36 L41,38 Z"
+        android:fillColor="#FFE53935" />
+</vector>

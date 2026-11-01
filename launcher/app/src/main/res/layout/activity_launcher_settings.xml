@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AMOLED Black TV Settings: Apple TV-like split screen layout (Left: Menu, Right: Active Page) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000"
+    android:orientation="horizontal"
+    android:paddingStart="44dp"
+    android:paddingEnd="44dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="32dp">
+
+    <!-- LEFT MENU (Navigation list) -->
+    <LinearLayout
+        android:id="@+id/leftMenuContainer"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/settings"
+            android:textColor="#FFFFFFFF"
+            android:textSize="36sp"
+            android:fontFamily="@string/font_light"
+            android:letterSpacing="-0.02" />
+
+        <!-- Menu items list with smooth vertical scroll -->
+        <ScrollView
+            android:id="@+id/menuScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:id="@+id/menuItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 1. Network & Wi-Fi -->
+                <TextView
+                    android:id="@+id/menuNetwork"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_wifi"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Network &amp; Wi-Fi" />
+
+                <!-- 2. Display & Picture -->
+                <TextView
+                    android:id="@+id/menuDisplay"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_display"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Display &amp; Picture" />
+
+                <!-- 3. Sound & Audio -->
+                <TextView
+                    android:id="@+id/menuSound"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_sound"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Sound &amp; Audio" />
+
+                <!-- 4. Apps & Permissions -->
+                <TextView
+                    android:id="@+id/menuApps"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_apps"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Apps &amp; Permissions" />
+
+                <!-- 5. Storage & Reset -->
+                <TextView
+                    android:id="@+id/menuStorage"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_storage"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Storage &amp; Reset" />
+
+                <!-- 6. Remotes & Accessories -->
+                <TextView
+                    android:id="@+id/menuRemotes"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_remotes"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Remotes &amp; Bluetooth" />
+
+                <!-- 7. Accounts & Sign-in -->
+                <TextView
+                    android:id="@+id/menuAccounts"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_accounts"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Accounts &amp; Sign-in" />
+
+                <!-- 8. Device Preferences -->
+                <TextView
+                    android:id="@+id/menuPrefs"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_prefs"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Device Preferences" />
+
+                <!-- 9. Privacy & Security -->
+                <TextView
+                    android:id="@+id/menuPrivacy"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_privacy"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Privacy &amp; Security" />
+
+                <!-- 10. Accessibility -->
+                <TextView
+                    android:id="@+id/menuAccessibility"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_accessibility"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Accessibility" />
+
+                <!-- 11. Launcher Profiles -->
+                <TextView
+                    android:id="@+id/menuProfiles"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_profiles"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Launcher Profiles" />
+
+                <!-- 12. App Icons Theme -->
+                <TextView
+                    android:id="@+id/menuIcons"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_icons"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="App Icons Theme" />
+
+                <!-- 13. Wallpaper & Screensaver -->
+                <TextView
+                    android:id="@+id/menuWallpaper"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_wallpaper"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Wallpaper &amp; Screensaver" />
+
+                <!-- 14. Display & Clock -->
+                <TextView
+                    android:id="@+id/menuClock"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_clock"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Display &amp; Clock" />
+
+                <!-- 15. Home & Dock Layout -->
+                <TextView
+                    android:id="@+id/menuLayout"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_layout"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="Home &amp; Dock" />
+
+                <!-- 16. System & About TV -->
+                <TextView
+                    android:id="@+id/menuSystem"
+                    style="@style/SettingsMenuItem"
+                    android:drawableStart="@drawable/ic_settings_about"
+                    android:drawablePadding="14dp"
+                    android:drawableTint="#FFFFFFFF"
+                    android:text="About TV &amp; System" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- RIGHT CONTENT AREA (Active Settings Page in AMOLED Black Card) -->
+    <FrameLayout
+        android:id="@+id/rightContentContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/settings_page_card_bg"
+        android:padding="32dp">
+
+        <!-- 1. Network & Wi-Fi Page -->
+        <ScrollView
+            android:id="@+id/pageNetwork"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Network &amp; Wi-Fi" />
+
+                <TextView
+                    android:id="@+id/tvWifiStatus"
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Checking Wi-Fi status..." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenWifiSettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Open Wi-Fi Settings" />
+
+                    <TextView
+                        android:id="@+id/btnOpenWirelessSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Network &amp; Internet Settings" />
+
+                    <TextView
+                        android:id="@+id/btnOpenDataUsage"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Data Usage &amp; Alerts" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 2. Display & Picture Page -->
+        <ScrollView
+            android:id="@+id/pageDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Display &amp; Picture" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Adjust TV picture mode, backlight, brightness, and screen resolution." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenDisplaySettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Picture &amp; Display Settings" />
+
+                    <TextView
+                        android:id="@+id/btnOpenScreenResolution"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Screen Resolution &amp; Scaling" />
+
+                    <TextView
+                        android:id="@+id/btnOpenColorSpace"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Color Depth &amp; HDR Settings" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 3. Sound & Audio Page -->
+        <ScrollView
+            android:id="@+id/pageSound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Sound &amp; Audio" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Sound modes, Dolby Audio, equalizer, speaker output, and system sounds." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenSoundSettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Sound Settings &amp; Equalizer" />
+
+                    <TextView
+                        android:id="@+id/btnOpenVolumePanel"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Volume &amp; Audio Output" />
+
+                    <TextView
+                        android:id="@+id/btnOpenDolbyAudio"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Surround Sound &amp; Formats" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 4. Apps & Permissions Page -->
+        <ScrollView
+            android:id="@+id/pageApps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Apps &amp; Permissions" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Manage all installed TV apps, default apps, special access, and unknown sources." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenAllApps"
+                        style="@style/SettingsActionButton"
+                        android:text="See All Installed Apps" />
+
+                    <TextView
+                        android:id="@+id/btnOpenDefaultApps"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Default Apps &amp; Launcher" />
+
+                    <TextView
+                        android:id="@+id/btnOpenUnknownSources"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Install Unknown Apps" />
+
+                    <TextView
+                        android:id="@+id/btnOpenSpecialAppAccess"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Special App Access &amp; Permissions" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 5. Storage & Reset Page -->
+        <ScrollView
+            android:id="@+id/pageStorage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Storage &amp; Reset" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Internal shared storage, cached data, connected USB drives, and factory reset." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenStorageSettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Internal Shared Storage" />
+
+                    <TextView
+                        android:id="@+id/btnOpenFactoryReset"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Factory Data Reset" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 6. Remotes & Accessories Page -->
+        <ScrollView
+            android:id="@+id/pageRemotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Remotes &amp; Accessories" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Pair TV remotes, gamepads, Bluetooth headphones, and soundbars." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnAddAccessory"
+                        style="@style/SettingsActionButton"
+                        android:text="Add Bluetooth Accessory (Pairing)" />
+
+                    <TextView
+                        android:id="@+id/btnOpenBluetoothSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Bluetooth Devices List" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 7. Accounts & Sign-in Page -->
+        <ScrollView
+            android:id="@+id/pageAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Accounts &amp; Sign-in" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Manage Google account, account sync, and additional sign-in services." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnAddAccount"
+                        style="@style/SettingsActionButton"
+                        android:text="Add Google Account" />
+
+                    <TextView
+                        android:id="@+id/btnAccountSync"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Account Sync Settings" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 8. Device Preferences Page -->
+        <ScrollView
+            android:id="@+id/pagePrefs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Device Preferences" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Date &amp; time, language, on-screen keyboard, ambient daydream, and power." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenDateSettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Date &amp; Time Settings" />
+
+                    <TextView
+                        android:id="@+id/btnOpenLanguageSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Language &amp; Region" />
+
+                    <TextView
+                        android:id="@+id/btnOpenKeyboardSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Keyboard &amp; Input Methods" />
+
+                    <TextView
+                        android:id="@+id/btnOpenAmbientSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Ambient Mode &amp; Screensaver" />
+
+                    <TextView
+                        android:id="@+id/btnOpenPowerSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Power &amp; Energy Saver" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 9. Privacy & Security Page -->
+        <ScrollView
+            android:id="@+id/pagePrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Privacy &amp; Security" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="App permissions, location access, device security, and diagnostic data." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenSecuritySettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Security &amp; Device Admin" />
+
+                    <TextView
+                        android:id="@+id/btnOpenLocationSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Location Status &amp; Scanning" />
+
+                    <TextView
+                        android:id="@+id/btnOpenPrivacySettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Privacy Settings" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 10. Accessibility Page -->
+        <ScrollView
+            android:id="@+id/pageAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Accessibility" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Captions, high-contrast text, accessibility shortcuts, and screen readers." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenCaptionSettings"
+                        style="@style/SettingsActionButton"
+                        android:text="Captions &amp; Subtitles" />
+
+                    <TextView
+                        android:id="@+id/btnOpenAccessibilitySettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Accessibility Services" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 11. Launcher Profiles Page -->
+        <ScrollView
+            android:id="@+id/pageProfiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Profiles" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Each profile keeps its own icons, settings and preferences independently." />
+
+                <TextView
+                    android:id="@+id/tvActiveProfileLabel"
+                    style="@style/SettingsPageSubtitle"
+                    android:layout_marginTop="8dp"
+                    android:text="Active Profile: Family"
+                    android:textColor="#FF4DFF88" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnSelectProfileFamily"
+                        style="@style/SettingsActionButton"
+                        android:drawableStart="@drawable/ic_profile_family"
+                        android:drawablePadding="14dp"
+                        android:drawableTint="#FFFFFFFF"
+                        android:text="FAMILY  •  Classic Real Icons (Default)" />
+
+                    <TextView
+                        android:id="@+id/btnSelectProfileAben"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_profile_aben"
+                        android:drawablePadding="14dp"
+                        android:drawableTint="#FFFFFFFF"
+                        android:text="ABEN  •  Dark Fluid Glass Icons" />
+
+                    <TextView
+                        android:id="@+id/btnSelectProfileAnan"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_profile_anan"
+                        android:drawablePadding="14dp"
+                        android:drawableTint="#FFFFFFFF"
+                        android:text="ANAN  •  Classic Real Icons" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="#2EFFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 12. App Icons Theme Page -->
+        <ScrollView
+            android:id="@+id/pageIcons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="App Icons Theme" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Choose the icon treatment. Applies immediately to Home, Dock, and Drawer." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnThemeDark"
+                        style="@style/SettingsActionButton"
+                        android:drawableStart="@drawable/ic_radio_off"
+                        android:drawablePadding="14dp"
+                        android:drawableTint="#FFFFFFFF"
+                        android:text="Dark (Default)  —  iPhone dark mode style 16:9 icons" />
+
+                    <TextView
+                        android:id="@+id/btnThemeClassic"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_radio_off"
+                        android:drawablePadding="14dp"
+                        android:drawableTint="#FFFFFFFF"
+                        android:text="Icons  —  Original full-colour app icons" />
+
+                    <TextView
+                        android:id="@+id/btnThemeFluidGlass"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_radio_off"
+                        android:drawablePadding="14dp"
+                        android:drawableTint="#FFFFFFFF"
+                        android:text="Black Liquid Glass  —  Dark fluid glass lossless WebP pack" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 13. Wallpaper & Screensaver Page -->
+        <ScrollView
+            android:id="@+id/pageWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Wallpaper &amp; Screensaver" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Blood Moon live wallpaper, MoeWalls screensaver stream, 5-minute auto rotation, and local pack." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnLaunchScreensaverNow"
+                        style="@style/SettingsActionButton"
+                        android:text="Preview Screensaver Now" />
+
+                    <TextView
+                        android:id="@+id/btnScreensaverRotationToggle"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Screensaver Rotation: Every 5 Minutes (Active)" />
+
+                    <TextView
+                        android:id="@+id/btnWallpaperPicker"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Change Home Wallpaper" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 14. Display & Clock Page -->
+        <ScrollView
+            android:id="@+id/pageClock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Display &amp; Clock" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Clock time format (System, 12-hour, 24-hour) and Immersive Fullscreen Clock View." />
+
+                <!-- Clock Format Choices -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/clockFormatSystem"
+                        style="@style/SettingsPillButton"
+                        android:text="System" />
+
+                    <TextView
+                        android:id="@+id/clockFormat12"
+                        style="@style/SettingsPillButton"
+                        android:layout_marginStart="14dp"
+                        android:text="12-Hour" />
+
+                    <TextView
+                        android:id="@+id/clockFormat24"
+                        style="@style/SettingsPillButton"
+                        android:layout_marginStart="14dp"
+                        android:text="24-Hour" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Apple-style Clock Widget Design"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:layout_marginTop="6dp"
+                    android:text="Choose from 7 minimalistic Apple-style clock widget designs for Home and Fullscreen view." />
+
+                <LinearLayout
+                    android:id="@+id/clockStylesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical">
+
+                    <TextView android:id="@+id/btnClockStyle1" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="1. Ultra Minimal (Extralight Thin)" />
+                    <TextView android:id="@+id/btnClockStyle2" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="2. Bold Classic (iOS 16 Geometric)" />
+                    <TextView android:id="@+id/btnClockStyle3" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="3. Cupertino Stacked (Modular Compact)" />
+                    <TextView android:id="@+id/btnClockStyle4" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="4. California Elegant Serif (Luxury)" />
+                    <TextView android:id="@+id/btnClockStyle5" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="5. Liquid Glass Capsule (Frosted Pill)" />
+                    <TextView android:id="@+id/btnClockStyle6" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="6. Monospace Chrono (Precision Tabular)" />
+                    <TextView android:id="@+id/btnClockStyle7" style="@style/SettingsPillButton" android:layout_width="match_parent" android:layout_marginBottom="8dp" android:text="7. Horizon Inline (Clean Wordmark)" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Immersive Fullscreen Clock View"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:layout_marginTop="6dp"
+                    android:text="Press UP on Home to open the fullscreen live wallpaper with Apple-style clock. Press DOWN to return smoothly." />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 15. Home & Dock Page -->
+        <ScrollView
+            android:id="@+id/pageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="Home &amp; Dock" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="Number of columns on the home screen grid, dock spacing, and app arrangement." />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Grid Columns"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp"
+                    android:fontFamily="@string/font_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/columns4"
+                        style="@style/SettingsPillButton"
+                        android:text="4" />
+
+                    <TextView
+                        android:id="@+id/columns5"
+                        style="@style/SettingsPillButton"
+                        android:layout_marginStart="14dp"
+                        android:text="5" />
+
+                    <TextView
+                        android:id="@+id/columns6"
+                        style="@style/SettingsPillButton"
+                        android:layout_marginStart="14dp"
+                        android:text="6" />
+
+                    <TextView
+                        android:id="@+id/columns7"
+                        style="@style/SettingsPillButton"
+                        android:layout_marginStart="14dp"
+                        android:text="7" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnReorderApps"
+                    style="@style/SettingsActionButton"
+                    android:layout_marginTop="28dp"
+                    android:text="Reorder Apps on Home" />
+
+                <TextView
+                    android:id="@+id/btnManageWidgets"
+                    style="@style/SettingsActionButton"
+                    android:layout_marginTop="12dp"
+                    android:text="Select &amp; Remove Widgets" />
+
+                <TextView
+                    android:id="@+id/btnResetDefaultWidgets"
+                    style="@style/SettingsActionButton"
+                    android:layout_marginTop="12dp"
+                    android:text="Keep Default Widgets (Restore Defaults)" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 16. System & About Page -->
+        <ScrollView
+            android:id="@+id/pageSystem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingsPageTitle"
+                    android:text="About TV &amp; System" />
+
+                <TextView
+                    style="@style/SettingsPageSubtitle"
+                    android:text="System information, firmware updates, device model, and restart options." />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/btnOpenDeviceInfo"
+                        style="@style/SettingsActionButton"
+                        android:text="About TV / Device Info" />
+
+                    <TextView
+                        android:id="@+id/btnOpenSystemUpdate"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="System Firmware Update" />
+
+                    <TextView
+                        android:id="@+id/btnOpenDeveloperSettings"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Developer Options" />
+
+                    <TextView
+                        android:id="@+id/btnRestartTV"
+                        style="@style/SettingsActionButton"
+                        android:layout_marginTop="10dp"
+                        android:text="Restart TV" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>
