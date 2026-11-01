@@ -1,8 +1,24 @@
 # Apple-Clean-TV
 
-An Apple-style Android TV launcher: liquid glass UI, buttery 60fps animations,
-icon packs, live wallpapers, Apple-like clock widgets, and a clean minimal home.
-Your TV, but Apple.
+Turn any regular Android TV into a premium Apple-like UI with just a code.
+
+## What is this?
+
+Apple-Clean-TV is a **launcher for Android TV**. It fully replaces your TV's
+stock home screen. Install it, set it as default Home, and your TV boots
+straight into it. No ads, no clutter.
+
+What it does:
+
+- **Removes bloatware** — safe debloat disables the junk packages your TV
+  ships with (stock launcher kept as instant fallback), with a full backup
+  and one-line restore if you ever want stock back
+- **Removes ads** — the stock Android TV home pushes sponsored rows and ads;
+  this launcher has none. Your home screen is yours again
+- **Makes your TV super fast** — no heavy stock UI, no background junk,
+  60fps target, lightweight by design
+- **Premium Apple-like UI** — liquid glass dock, cinematic top shelf, frosted
+  dialogs, horizon glow, Apple-style clocks and animations throughout
 
 ## Base project attribution
 
