@@ -52,6 +52,22 @@ goes to the CleanYourTV project and its contributors. See the base docs in
 - **Safe debloat** — only safe packages disabled, full backup + one-line
   restore (`backup/restore.ps1` / `restore.sh`)
 
+## Build it yourself with an AI agent
+
+You don't need to be a developer. An AI agent (Cursor, Antigravity, Claude)
+can build and customize this entire launcher for you.
+
+1. **Connect your TV** — on your Android TV, enable Developer options, turn on
+   ADB debugging, and connect over WiFi: `adb connect <TV-IP>:5555`
+2. **Point your agent at this repo** — open the project in Cursor/Antigravity/
+   Claude and tell it what you want
+3. **Just wait** — the agent writes the code, builds the APK, installs it on
+   your TV, and verifies it on the real screen
+4. **Or customize anything** — new icon packs, new wallpapers, new animations,
+   new features, change anything you want. It's all here, all editable
+
+One repo, one WiFi connection, any old Android TV becomes premium and fast.
+
 ## Requirements
 
 - Android TV / Google TV (tested on Realme Smart TV, Android 11)
